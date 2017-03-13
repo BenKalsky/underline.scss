@@ -5,24 +5,24 @@ permalink:           pretty
 #relative_permalinks: true
 
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
+title:               UNDERLINE.SCSS
+tagline:             A Medium-Like Underline (SCSS Mixin)
+description:         UNDERLINE.SCSS - A carefully crafted, pixel-perfect, medium-like underline
+url:                 https://github.com/benkalsky/underline.scss
 baseurl:             ''
-paginate:            5
+#paginate:            5
 
 sass:
   style: :expanded
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Ben Kalsky
+  url:               https://twitter.com/benkalsky
+  email:             benkalsky@gmail.com
 
 # Custom vars
 version:             1.0.0
 
 gems:
-  - jekyll-paginate
+#  - jekyll-paginate
