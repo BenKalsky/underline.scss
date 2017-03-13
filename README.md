@@ -1,31 +1,31 @@
 # underline.scss
 
-### Medium-Like Underline (SCSS Mixin)
+UNDERLINE.SCSS is a carefully crafted, pixel-perfect, medium-like underline, inspired by [Marcin Wichary's post - Crafting link underlines on Medium](https://medium.design/crafting-link-underlines-on-medium-7c03a9274f9#.jhvfwlt8q).
 
+### Settings:
 ```scss
+$text-color: black !default;
+$text-color-active: rgba($text-color, .8) !default;
+$underline-color: $text-color !default;
+$underline-color-active: $text-color-active !default;
 $background-color: white !default;
-$link-color: black !default;
-$link-color-active: black !default;
-$link-underline-color: $link-color !default;
-$link-underline-color-active: $link-color-active !default;
-$link-underline-width: 1px !default;
-$link-underline-offset: 2px !default;
+$underline-width: 1px !default;
+$underline-offset: 2px !default;
 $breaking-underlines: true !default;
+```
 
-@mixin underline($color: $link-underline-color, $weight: $link-underline-width, $offset: $link-underline-offset) {
+### The Mixin:
+```scss
+@mixin underline($color: $underline-color, $weight: $underline-width, $offset: $underline-offset) {
   background-image: linear-gradient(to top, transparent, transparent $offset, $color $offset, $color ($offset + $weight), transparent ($offset + $weight));
 }
+```
 
+### Usage:
+```scss
 a {
-  color: $link-color;
-  transition: 0.2s;
-
-  &:hover, &:focus {
-    color: $link-color-active;
-  }
-}
-
-a.underline {
+  color: $text-color;
+  transition: .2s;
   text-decoration: none;
   position: relative;
 
@@ -33,18 +33,24 @@ a.underline {
     text-shadow: (-1px) -1px 0 $background-color, 1px -1px 0 $background-color, -1px 1px 0 $background-color, 1px 1px 0 $background-color;
   }
 
-  @include underline($link-color);
+  @include underline($text-color);
 
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    @include underline($link-color, 0.5);
+    @include underline($text-color, .5);
   }
 
   &:hover, &:focus {
-    @include underline($link-color-active);
+    color: $text-color-active;
+    text-decoration: none;
+
+    @include underline($text-color-active);
 
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-      @include underline($link-color-active, 0.5);
+      @include underline($text-color-active, .5);
     }
   }
 }
 ```
+
+<3
+
