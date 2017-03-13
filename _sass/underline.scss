@@ -14,13 +14,6 @@ $breaking-underlines: true !default;
 a {
   color: $link-color;
   transition: 0.2s;
-
-  &:hover, &:focus {
-    color: $link-color-active;
-  }
-}
-
-a.underline {
   text-decoration: none;
   position: relative;
 
@@ -35,6 +28,9 @@ a.underline {
   }
 
   &:hover, &:focus {
+    color: $link-color-active;
+    text-decoration: none;
+
     @include underline($link-color-active);
 
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
