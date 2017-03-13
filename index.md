@@ -1,9 +1,9 @@
 ---
-layout: page
-title: The Mixin
+layout: home
+title: A carefully crafted, pixel-perfect, medium-like underline
 ---
 
-UNDERLINE.SCSS is a carefully crafted, pixel-perfect, medium-like underline, inspired by [Marcin Wichary's post - Crafting link underlines on Medium](https://medium.design/crafting-link-underlines-on-medium-7c03a9274f9#.jhvfwlt8q).
+> UNDERLINE.SCSS is a carefully crafted, pixel-perfect, medium-like underline, inspired by [Marcin Wichary's post - Crafting link underlines on Medium](https://medium.design/crafting-link-underlines-on-medium-7c03a9274f9#.jhvfwlt8q).
 
 ### Settings:
 ```scss
