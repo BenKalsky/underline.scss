@@ -1,0 +1,15 @@
+.sidebar a {
+  text-shadow: none;
+}
+
+.masthead-title {
+  &:first-letter {
+    vertical-align: -8px;
+    line-height: 0;
+    font-size: 160%;
+
+    @media (min-width: 38em) {
+      vertical-align: -10px;
+    }
+  }
+}

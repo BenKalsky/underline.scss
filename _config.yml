@@ -5,11 +5,7 @@ permalink:           pretty
 #relative_permalinks: true
 
 # Setup
-title:
-  first:              UNDER
-  span:               L
-  last:               INE.SCSS
-
+title:               UNDERLINE.SCSS
 tagline:             A Medium-Like Underline (SCSS Mixin)
 description:         UNDERLINE.SCSS - A carefully crafted, pixel-perfect, medium-like underline
 url:                 http://benkalsky.net/underline.scss
