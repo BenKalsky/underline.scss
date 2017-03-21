@@ -11,16 +11,16 @@ $breaking-underlines: true !default;
   background-image: linear-gradient(to top, transparent, transparent $offset, $color $offset, $color ($offset + $weight), transparent ($offset + $weight));
 }
 
-a {
+@mixin breaking-underline($background-color) {
+  text-shadow: (-1px) -1px 0 $background-color, 1px -1px 0 $background-color, -1px 1px 0 $background-color, 1px 1px 0 $background-color;
+}
+
+@mixin underline-link() {
   color: $text-color;
   transition: .2s;
   text-decoration: none;
   position: relative;
-
-  @if $breaking-underlines {
-    text-shadow: (-1px) -1px 0 $background-color, 1px -1px 0 $background-color, -1px 1px 0 $background-color, 1px 1px 0 $background-color;
-  }
-
+  @include breaking-underline($background-color);
   @include underline($text-color);
 
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
@@ -30,11 +30,14 @@ a {
   &:hover, &:focus {
     color: $text-color-active;
     text-decoration: none;
-
     @include underline($text-color-active);
 
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-      @include underline($text-color-active, .5);
+      @include underline($text-color, .5);
     }
   }
+}
+
+a {
+  @include underline-link;
 }
