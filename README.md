@@ -53,5 +53,3 @@ a {
 ```
 
 <3
-
-[![Analytics](https://ga-beacon.appspot.com/UA-92303047-3/underline.scss/readme?pixel)](https://github.com/igrigorik/ga-beacon)
